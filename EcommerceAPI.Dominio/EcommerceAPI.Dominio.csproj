@@ -7,13 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
+    <Folder Include="Services\Ecommerce\Productos\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EcommerceAPI.Common\EcommerceAPI.Common.csproj" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcommerceAPI.Comunes\EcommerceAPI.Comunes.csproj" />
     <ProjectReference Include="..\EcommerceAPI.Infraestructura\EcommerceAPI.Infraestructura.csproj" />
   </ItemGroup>
 

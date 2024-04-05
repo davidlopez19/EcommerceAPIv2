@@ -7,22 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ServiciosExternos\WebClient\" />
-    <Folder Include="ServiciosExternos\WebClient\Modelos\" />
-    <Folder Include="ServiciosExternos\WebClient\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.18" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.20">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NetCore.AutoRegisterDi" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EcommerceAPI.Comunes\EcommerceAPI.Comunes.csproj" />
+    <ProjectReference Include="..\EcommerceAPI.Dominio\EcommerceAPI.Dominio.csproj" />
+    <ProjectReference Include="..\EcommerceAPI.Infraestructura\EcommerceAPI.Infraestructura.csproj" />
   </ItemGroup>
 
 </Project>

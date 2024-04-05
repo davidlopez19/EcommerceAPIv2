@@ -1,21 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>ce841140-cba5-44ea-8cbf-0473152d9257</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EcommerAPI.Configuracion\EcommerceAPI.Configuracion.csproj" />
-    <ProjectReference Include="..\EcommerceAPI.Common\EcommerceAPI.Common.csproj" />
+    <ProjectReference Include="..\EcommerceAPI.Comunes\EcommerceAPI.Comunes.csproj" />
+    <ProjectReference Include="..\EcommerceAPI.Configuracion\EcommerceAPI.Configuracion.csproj" />
+    <ProjectReference Include="..\EcommerceAPI.Dominio\EcommerceAPI.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
