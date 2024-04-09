@@ -41,6 +41,9 @@ namespace EcommerceAPI.Dominio.Services.Ecommerce.Clientes
         /// <returns>Cliente actualizado en el sistema</returns>
         Task<ClientesContract> Update(ClientesContract contract);
 
+
+        Task<bool> Delete(int id);
+
     }
 
     public class ClientesService : IClientesService
@@ -83,6 +86,12 @@ namespace EcommerceAPI.Dominio.Services.Ecommerce.Clientes
         public async Task<ClientesContract> Update(ClientesContract contract)
         {
             return _mapper.Map<ClientesContract>(await _clientesRepository.Update(_mapper.Map<ClientesEntities>(contract)));
+        }
+
+
+        public async Task<bool> Delete(int id)
+        {
+            return await _clientesRepository.Delete(id);
         }
     }
 }

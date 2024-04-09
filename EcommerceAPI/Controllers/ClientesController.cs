@@ -59,5 +59,11 @@ namespace EcommerceAPI.Controllers
             }
             return BadRequest();
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<bool>> Delete(int id)
+        {
+            return Ok(await _clienteService.Delete(id));
+        }
     }
 }

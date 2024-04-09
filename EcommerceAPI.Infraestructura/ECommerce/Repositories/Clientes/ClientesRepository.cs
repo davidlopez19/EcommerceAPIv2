@@ -15,9 +15,18 @@ namespace EcommerceAPI.Infraestructura.ECommerce.Repositories.Clientes
             _context = context;
         }
 
-        public Task<bool> Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            var cliente = _context.Clientes.FirstOrDefault(x=>x.id_cliente==id);
+            if (cliente != null)
+            {
+                _context.Clientes.Remove(cliente);
+                _context.Entry(cliente).State = EntityState.Deleted;
+                await _context.SaveChangesAsync();
+                return true;
+            }
+
+            return false;
         }
 
         public async Task<ClientesEntities> Get(int id)
@@ -49,6 +58,8 @@ namespace EcommerceAPI.Infraestructura.ECommerce.Repositories.Clientes
             await _context.SaveChangesAsync();
             return cliente;
         }
+
+        
 
         public async Task<ClientesEntities> GetByCorreo(string correo)
         {
